@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login page</title>
+    <style>
+        #f1 {
+            background-color: burlywood;
+            font-size: medium;
+            font-family: serif;
+            border: 5px double red;
+            height: 300px;
+            width: 400px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 10px 10px 10px 10px greenyellow;
+        }
+
+        #Username {
+            background-color: chartreuse;
+            border: 2px solid blue;
+            border-radius: 5px;
+        }
+
+        #password,#conpassword {
+            background-color: chartreuse;
+            border: 2px solid blue;
+            border-radius: 5px;
+        }
+
+        #submit {
+            background-color: rgb(31, 192, 63);
+            color: white;
+            border: none;
+            border-radius: 7px;
+            box-shadow: 5PX 5PX 5PX black;
+            width: 20vh;
+            height: 7vh;
+            margin-left: 20px;
+
+        }
+
+        #reset {
+            background-color: rgb(20, 66, 218);
+            color: white;
+            border: none;
+            border-radius: 7px;
+            box-shadow: 5PX 5PX 5PX black;
+            width: 20vh;
+            height: 7vh;
+            margin-left: 50px;
+        }
+
+        #label {
+            background-color: greenyellow;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form id="f1" onsubmit="a()">
+        <center>
+            <h1>Login Page</h1>
+        </center>
+        <label id="label">Username :</label>
+        <input type="text" size="30" id="Username"><br><br>
+        <label id="label">password :</label>
+        <input type="password" size="30" id="password"><br><br>
+        <label id="label">Con password :</label>
+        <input type="password" size="25" id="conpassword"><br><br>
+        <input type="submit" id="submit">
+        <input type="reset" id="reset">
+    </form>
+    <script>
+        function a() {
+            let User = document.getElementById("Username").value;
+            let Pass = document.getElementById("password").value;
+            let confirm = document.getElementById("conpassword").value;
+
+            if (User === "" || Pass === "" || confirm === "") {
+                alert("please enter the username");
+                return false;
+            }
+            if (Pass.length < 6 || Pass.length > 10) {
+                alert("please enter valid password");
+                return false;
+            }
+            else if (Pass !== confirm) {
+                alert("please enter same password");
+
+            }
+        }
+    </script>
+</body>
+
+</html>

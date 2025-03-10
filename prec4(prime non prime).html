@@ -1,0 +1,32 @@
+.<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+        let n = prompt("enter number");
+        let count = 0;
+        if (n <= 1) {
+            document.write("it is not a primr number");
+        }
+        else {
+            for (let i = 1; i <= n; i++) {
+                if (n % i === 0) 
+                {
+                    document.write("youe number="+n%i+"<br>")
+                    count++;
+                }
+            }
+        }
+        if (count > 2) {
+            document.write("it is not prime number")
+        }
+        else {
+            document.write("it is prime number")
+        }
+        
+        
+        </script>
+</body>
+
+</html>
